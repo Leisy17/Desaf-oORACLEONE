@@ -9,8 +9,7 @@ function encriptar(){
     document.getElementById("ImgRight").style.display = "none";
     document.getElementById("textright1").style.display = "none";
     document.getElementById("textright2").innerHTML = textCifrado;
-    document.getElementById("copiar").style.display = "show";
-    document.getElementById("copiar").style.display = "inherit";
+    document.getElementById("copiar").className = 'show'; 
 }
 function desencriptar(){
     var texto=document.getElementById("InputTexto").value.toLowerCase();
@@ -22,6 +21,9 @@ function desencriptar(){
     document.getElementById("ImgRight").style.display = "none";
     document.getElementById("textright1").style.display = "none";
     document.getElementById("textright2").innerHTML = textCifrado;
-    document.getElementById("copiar").style.display = "show";
-    document.getElementById("copiar").style.display = "inherit";
+    document.getElementById("copiar").className = 'show'; 
 }
+ function copiar(){
+    let texto = document.getElementById('textright2').innerHTML;
+    navigator.clipboard.writeText(texto);
+ }
